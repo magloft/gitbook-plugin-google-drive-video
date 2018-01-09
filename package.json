@@ -1,6 +1,6 @@
 {
   "name": "gitbook-plugin-google-drive-video",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Embed Google Drive videos",
   "main": "index.js",
   "scripts": {
