@@ -17,6 +17,9 @@
     "video",
     "embed"
   ],
+  "engines": {
+    "gitbook": ">2.0.0"
+  },
   "author": "Tobias Strebitzer",
   "license": "MIT",
   "bugs": {
