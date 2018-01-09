@@ -1,5 +1,6 @@
 const assert = require('assert')
 const plugin = require('../index.js')
+const getVideoID = require('../getVideoID')
 const gdrive = plugin.blocks.gdrive
 
 const validTestIDs = [
@@ -44,49 +45,49 @@ const invalidVideoUrls = [
   '$[[testID]]'
 ]
 
-describe('gdrive', function () {
-  describe('#getVideoID()', function () {
-    it('should return the correct video ID when the video ID and the url are valid', function () {
-      for (let testID of validTestIDs) {
-        for (let videoUrl of validVideoUrls) {
-          const url = videoUrl.replace('[[testID]]', testID)
-          const videoID = gdrive.getVideoID(url)
-          assert.equal(videoID, testID)
-        }
+describe('#getVideoID()', function () {
+  it('should return the correct video ID when the video ID and the url are valid', function () {
+    for (let testID of validTestIDs) {
+      for (let videoUrl of validVideoUrls) {
+        const url = videoUrl.replace('[[testID]]', testID)
+        const videoID = getVideoID(url)
+        assert.equal(videoID, testID)
       }
-    })
-
-    it('should return null if the videoID is valid and the url is invalid', function () {
-      for (let testID of validTestIDs) {
-        for (let videoUrl of invalidVideoUrls) {
-          const url = videoUrl.replace('[[testID]]', testID)
-          const videoID = gdrive.getVideoID(url)
-          assert.equal(videoID, null)
-        }
-      }
-    })
-
-    it('should return null if the videoID is invalid and the url is valid', function () {
-      for (let testID of invalidTestIDs) {
-        for (let videoUrl of validVideoUrls) {
-          const url = videoUrl.replace('[[testID]]', testID)
-          const videoID = gdrive.getVideoID(url)
-          assert.equal(videoID, null)
-        }
-      }
-    })
-
-    it('should return null if the videoID is invalid and the url is invalid', function () {
-      for (let testID of invalidTestIDs) {
-        for (let videoUrl of invalidVideoUrls) {
-          const url = videoUrl.replace('[[testID]]', testID)
-          const videoID = gdrive.getVideoID(url)
-          assert.equal(videoID, null)
-        }
-      }
-    })
+    }
   })
 
+  it('should return null if the videoID is valid and the url is invalid', function () {
+    for (let testID of validTestIDs) {
+      for (let videoUrl of invalidVideoUrls) {
+        const url = videoUrl.replace('[[testID]]', testID)
+        const videoID = getVideoID(url)
+        assert.equal(videoID, null)
+      }
+    }
+  })
+
+  it('should return null if the videoID is invalid and the url is valid', function () {
+    for (let testID of invalidTestIDs) {
+      for (let videoUrl of validVideoUrls) {
+        const url = videoUrl.replace('[[testID]]', testID)
+        const videoID = getVideoID(url)
+        assert.equal(videoID, null)
+      }
+    }
+  })
+
+  it('should return null if the videoID is invalid and the url is invalid', function () {
+    for (let testID of invalidTestIDs) {
+      for (let videoUrl of invalidVideoUrls) {
+        const url = videoUrl.replace('[[testID]]', testID)
+        const videoID = getVideoID(url)
+        assert.equal(videoID, null)
+      }
+    }
+  })
+})
+
+describe('gdrive', function () {
   describe('#process()', function () {
     it('should return an iframe if the generator mode is website and video ID and url are valid', function () {
       const url = validVideoUrls[0].replace('[[testID]]', validTestIDs[0])

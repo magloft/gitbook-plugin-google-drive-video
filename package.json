@@ -1,11 +1,11 @@
 {
   "name": "gitbook-plugin-google-drive-video",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Embed Google Drive videos",
   "main": "index.js",
   "scripts": {
     "test": "mocha",
-    "lint": "eslint test/test.js index.js"
+    "lint": "eslint test/test.js getVideoID.js index.js"
   },
   "repository": {
     "type": "git",
