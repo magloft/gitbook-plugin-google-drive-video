@@ -1,0 +1,36 @@
+{
+  "name": "gitbook-plugin-google-drive-video",
+  "version": "1.0.0",
+  "description": "Embed Google Drive videos",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "lint": "eslint test/test.js index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MagLoft/gitbook-plugin-google-drive-video.git"
+  },
+  "keywords": [
+    "gitbook",
+    "google-drive",
+    "video",
+    "embed"
+  ],
+  "author": "Tobias Strebitzer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MagLoft/gitbook-plugin-google-drive-video/issues"
+  },
+  "homepage": "https://github.com/MagLoft/gitbook-plugin-google-drive-video#readme",
+  "devDependencies": {
+    "eslint": "^4.15.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-standard": "^11.0.0-beta.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "mocha": "^4.1.0"
+  }
+}
