@@ -1,3 +1,5 @@
+'use strict'
+
 const getVideoID = require('./getVideoID')
 
 module.exports = {

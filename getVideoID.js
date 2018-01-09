@@ -1,3 +1,5 @@
+'use strict'
+
 module.exports = function (url) {
   url = url.trim()
   if (/drive\.google\.com/.test(url)) {
