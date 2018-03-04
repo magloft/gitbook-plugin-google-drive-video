@@ -18,7 +18,7 @@ You can now add google drive videos to your book:
 ```
 check out this video:
 
-{% gdrive %} https://drive.google.com/file/d/12yyAYTldr82RhGU926Smcs8tFqEJd8al/view?usp=sharing {% gdrive %}
+{% gdrive %} https://drive.google.com/file/d/12yyAYTldr82RhGU926Smcs8tFqEJd8al/view?usp=sharing {% endgdrive %}
 ```
 
 The video will automatically placed in a responsive iframe (website) or a link to the video (book version).
